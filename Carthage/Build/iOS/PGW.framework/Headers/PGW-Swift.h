@@ -618,7 +618,7 @@ SWIFT_CLASS("_TtC3PGW13PGWSDKBuilder")
 - (PGWSDKBuilder * _Nonnull)apiEnvironment:(enum APIEnvironment)apiEnvironment SWIFT_WARN_UNUSED_RESULT;
 - (PGWSDKBuilder * _Nonnull)merchantID:(NSString * _Nonnull)merchantID SWIFT_WARN_UNUSED_RESULT;
 - (PGWSDKBuilder * _Nonnull)enableLog:(BOOL)enableLog SWIFT_WARN_UNUSED_RESULT;
-- (PGWSDK * _Nullable)initialize SWIFT_WARN_UNUSED_RESULT;
+- (PGWSDK * _Nullable)initialize;
 @end
 
 @class PaymentOptionRequest;

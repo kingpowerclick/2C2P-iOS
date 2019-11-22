@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name                    = "2C2P-iOS"
-  s.version                 = "4.2.7"
+  s.version                 = "4.2.8"
   s.summary                 = "Unofficial Carthage supported for 2C2P iOS SDK"
   s.homepage                = "https://github.com/kingpowerclick/2C2P-iOS"
   s.license                 = { :type => "MIT", :file => "License.md" }
@@ -9,5 +9,7 @@ Pod::Spec.new do |s|
   s.platform                = :ios, "10.0"
   s.source                  = { :http => "https://github.com/kingpowerclick/2C2P-iOS/blob/master/2C2P-iOS.zip?raw=true" }
   s.ios.vendored_frameworks = "PGW.framework"
+  s.ios.public_header_files = "PGW.framework/Headers/*.h"
+  s.ios.source_files        = "PGW.framework/Headers/*.h"
 
 end

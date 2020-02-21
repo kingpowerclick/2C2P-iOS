@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name                    = "2C2P-iOS"
-  s.version                 = "4.2.9"
+  s.version                 = "4.2.10"
   s.summary                 = "Unofficial Carthage supported for 2C2P iOS SDK"
   s.homepage                = "https://github.com/kingpowerclick/2C2P-iOS"
   s.license                 = { :type => "MIT", :file => "License.md" }

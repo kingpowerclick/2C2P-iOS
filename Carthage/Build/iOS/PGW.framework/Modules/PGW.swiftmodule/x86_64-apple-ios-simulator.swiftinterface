@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
-// swift-module-flags: -target x86_64-apple-ios8.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name PGW
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name PGW
 import Darwin
 import Foundation
 import Swift
@@ -35,11 +35,6 @@ import WebKit
   @objc public var alternativeOptionDetail: PGW.AlternativeOptionDetail? {
     get
     }
-  @objc override dynamic public init()
-  @objc deinit
-}
-@objc public class PGWBaseWebViewDelegate : ObjectiveC.NSObject {
-  @objc public init(success: @escaping PGW.response<PGW.TransactionResultResponse>, failure: @escaping PGW.failure)
   @objc override dynamic public init()
   @objc deinit
 }
@@ -160,12 +155,6 @@ public struct BlockModeOption : Swift.OptionSet {
   @objc override dynamic public init()
   @objc deinit
 }
-@objc public class PGWUIWebViewDelegate : PGW.PGWBaseWebViewDelegate, UIKit.UIWebViewDelegate {
-  @objc public func webView(_ webView: UIKit.UIWebView, shouldStartLoadWith request: Foundation.URLRequest, navigationType: UIKit.UIWebView.NavigationType) -> Swift.Bool
-  @objc public func webViewDidFinishLoad(_ webView: UIKit.UIWebView)
-  @objc override public init(success: @escaping PGW.response<PGW.TransactionResultResponse>, failure: @escaping PGW.failure)
-  @objc deinit
-}
 public enum CipherError : Swift.Error {
   case encrypt
   case decrypt
@@ -208,11 +197,14 @@ extension Cipher {
   @objc override dynamic public init()
   @objc deinit
 }
-@objc public class PGWWKWebViewDelegate : PGW.PGWBaseWebViewDelegate, WebKit.WKNavigationDelegate {
-  @objc public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
-  @objc public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
-  @objc override public init(success: @escaping PGW.response<PGW.TransactionResultResponse>, failure: @escaping PGW.failure)
+@objc final public class PGWWKWebViewDelegate : PGW.BaseModel {
+  @objc public init(success: @escaping PGW.response<PGW.TransactionResultResponse>, failure: @escaping PGW.failure)
+  @objc override dynamic public init()
   @objc deinit
+}
+extension PGWWKWebViewDelegate : WebKit.WKNavigationDelegate {
+  @objc final public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+  @objc final public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation)
 }
 @objc public class PaymentOptionDetailRequest : PGW.BaseRequest {
   @objc public var paymentToken: Swift.String!

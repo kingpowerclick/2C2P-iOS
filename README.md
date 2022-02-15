@@ -1,6 +1,6 @@
 # 2C2P-iOS
 
-Unofficial CocoaPods and Carthage supported for [2C2P iOS SDK](https://developer.2c2p.com/docs)
+Unofficial Swift Package Manager supported for [2C2P iOS SDK](https://developer.2c2p.com/docs)
 
 ## Installation
 

@@ -1,18 +1,17 @@
 # 2C2P-iOS
-[![pod](https://img.shields.io/cocoapods/v/2C2P-iOS.svg)](https://cocoapods.org/pods/2C2P-iOS) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 Unofficial CocoaPods and Carthage supported for [2C2P iOS SDK](https://developer.2c2p.com/docs)
 
 ## Installation
 
-### CocoaPods
+### Swift Package Manager
 
-```rb
-pod '2C2P-iOS'
+To install using [Swift Package Manager](https://swift.org/package-manager/):
+
+a. Add through **File -> Swift Packages -> Add Package Dependency...** action in Xcode. Use `https://github.com/kingpowerclick/2C2P-iOS.git` repository URL and the **Version: Up to Next Minor** starting with `4.4.1` option.
+
+b. Add this line to `dependencies` section of your `Package.swift`:
+```
+.package(name: "PGW", url: "https://github.com/kingpowerclick/2C2P-iOS.git", .upToNextMinor(from: "0.10.2"))
 ```
 
-### Carthage
-
-```
-github "kingpowerclick/2C2P-iOS"
-```

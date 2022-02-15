@@ -12,6 +12,6 @@ a. Add through **File -> Swift Packages -> Add Package Dependency...** action in
 
 b. Add this line to `dependencies` section of your `Package.swift`:
 ```
-.package(name: "PGW", url: "https://github.com/kingpowerclick/2C2P-iOS.git", .upToNextMinor(from: "0.10.2"))
+.package(name: "PGW", url: "https://github.com/kingpowerclick/2C2P-iOS.git", .upToNextMinor(from: "4.4.1"))
 ```
 

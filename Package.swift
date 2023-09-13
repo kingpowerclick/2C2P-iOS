@@ -14,5 +14,5 @@ let package = Package(
   targets: [
     .binaryTarget(
        name: "PGW",
-       url: "https://github.com/kingpowerclick/2C2P-iOS/releases/download/4.5.0/PGW.xcframework.zip",
-       checksum: "87ff6744416fd8f9e6a1e405d7a562a096c5e73c8810eb9bc808222e23ec52d1") ])
+       url: "https://github.com/kingpowerclick/2C2P-iOS/releases/download/4.5.1/PGW.xcframework.zip",
+       checksum: "9e85ec619be6471dc7c97bda5649969255fba2d06f8e382494fda3d4c0a36767") ])
